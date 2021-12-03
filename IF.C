@@ -1,4 +1,5 @@
-	    //find data type
+	    //using if statement
+
  #include<stdio.h>
  #include<conio.h>
 
