@@ -1,4 +1,4 @@
- 
+
 #include<stdio.h>
 
 
@@ -16,10 +16,10 @@ int main()
     printf("Enter power number(positive integer): ");
     scanf("%d",&b);
 	printf("Non-recursive: %d^%d = %d\n\n",a,b, powerNonRecursive(a, b));
-
+	printf("Power pecursion: %d^%d = %d\n\n",a,b, powerRecursion(a, b));
 
 	getchar();
-
+	getchar();
 
 
     return 0;
@@ -35,4 +35,13 @@ int powerNonRecursive(int a, int b)
        result=result*a;
     }
 	return result;
+}
+
+
+int powerRecursion(int a, int b)
+{
+    if (b != 0)
+        return (a*powerRecursion(a, b-1));
+    else
+        return 1;
 }
